@@ -1,0 +1,30 @@
+<div class="movie-list-container">
+  <mat-card class="movie-list-card">
+    <mat-card-header>
+      <h1>Interested Movies</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="movie-grid">
+        <div *ngFor="let movie of interestedMovies" class="movie-card" (click)="goToMovie(movie.id)">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.comment }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="movie-list-card">
+    <mat-card-header>
+      <h1>Seen Movies</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="movie-grid">
+        <div *ngFor="let movie of seenMovies" class="movie-card" (click)="goToMovie(movie.id)">
+          <h3>{{ movie.title }}</h3>
+          <p>Rating: {{ movie.rating }}</p>
+          <p>{{ movie.comment }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
